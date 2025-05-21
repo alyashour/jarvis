@@ -1,0 +1,11 @@
+# Rust
+**/*.rs.bk
+*.swp
+target
+
+# Mac
+.DS_Store
+
+# IDEs
+.idea
+.vscode
