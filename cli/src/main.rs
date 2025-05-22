@@ -1,5 +1,14 @@
-use jarvis::greet;
+mod cli;
+mod commands;
+
+use clap::Parser;
+
+use cli::Cli;
 
 fn main() {
-    println!("{}", greet("world"));
+    let cli = Cli::parse();
+
+    match cli.command {
+        _ => println!("Command not yet implemented.")
+    }
 }
