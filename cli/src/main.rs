@@ -7,9 +7,10 @@ use clap::Parser;
 use cli::Cli;
 
 fn main() {
-    let cli = Cli::parse();
+    let app = Cli::parse();
 
-    match cli.command {
+    match app.command {
+        cli::Commands::Task(args) => args.run(),
         _ => println!("Command not yet implemented.")
     }
 }

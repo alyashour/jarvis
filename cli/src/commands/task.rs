@@ -86,3 +86,23 @@ enum TaskCommands {
         immediate: bool,
     },
 }
+
+impl TaskArgs {
+    pub fn run(&self) {
+        match &self.command {
+            TaskCommands::Create {
+                title,
+                by,
+                r#do,
+                priority,
+                group,
+                parent
+            } => {
+                println!("Creating new task!");
+            }
+            _ => {
+                println!("NOOO");
+            }
+        }
+    }
+}
